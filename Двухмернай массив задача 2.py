@@ -10,17 +10,13 @@ for row in A:
     print(row)
 
 # Шаг 2: Формируем одномерный массив B
-B = []
+B = [0,0,0,0,0,0,0,0]
 for i in range(rows):
-    found = False             
+    B[i]=1          
     for j in range(cols):
-        if (A[i][j]) >= 0:
-            found = True
-            
-        if found == True:
-            B.append(1)
-        else:
-            B.append(-1)
+        if (A[i][j]) < 0:
+            B[i]=-1
+
             
 
 # Вывод результата
